@@ -568,7 +568,8 @@ def check_python_syntax_and_help(ve: ValidationErrors) -> None:
 
 def _write_text(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content, encoding="utf-8", newline="\n")
+    with path.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(content)
 
 
 def _build_valid_full_project(proj: Path) -> None:

@@ -61,7 +61,7 @@
 - **3 套满分 100% 权重的 6 维红队评分卡**：分别对应商业化产品（`commercial`）、免费开源项目（`free-oss`）与内部工具（`internal-tool`）；二手桌面信息封顶 `<= 5.0`，未经一手验证的核心假设封顶 `<= 7.5`，最多 2 轮重构（`V1 -> V2 -> V3`）。
 - **按需加载跨境合规模块（`module-cross-border-compliance.md`）**：当 `cross_border: true` 时自动介入，按当天实网核验开发者属地可用性、支付/MoR 税务边界、GDPR 第 17 条删除权、AI 数据留存披露与开源协议传染风险。
 - **`check_launch_gate.py` 自动化 Fail-Closed 规则**：拦截未锁定的 `tbd` 枚举、残留 `{{FILL:...}}` 占位符、缺失或错配的 `LAUNCH_BLOCKERS` 界标、未勾选上线阻塞项、5 类密钥泄露（覆盖 `.zero-to-launch/archive/` 及前端 `NEXT_PUBLIC_*SECRET*` 泄露，报告全程脱敏绝不输出明文）、生产配置中的 `MOCK_*=true`、Git 中追踪或未忽略的 `.env*` / `.dev.vars*`、非白名单 `.zero-to-launch/` 私有文档、缺失 `.dockerignore` / PaaS 排除规则、`dist/.zero-to-launch` 构建产物泄露，且扫描文件超限时 Fail-Closed 拒绝放行。
-- **4 环境矩阵 CI 持续实测**：`scripts/validate_repo.py --release` 在 `ubuntu-latest` 与 `windows-latest` × Python `3.9` 与 `3.12` 上自动执行元数据、链接、隐私与全套隔离单元测试。
+- **4 环境矩阵 CI 持续实测**：`scripts/validate_repo.py --release` 在 Ubuntu（`24.04` / `latest`）与 `windows-latest` × Python `3.9` 与 `3.12` 上自动执行元数据、链接、隐私与全套隔离单元测试。
 
 </details>
 

@@ -61,7 +61,7 @@ Most AI coding tools cheerlead your first idea and start writing code in five mi
 - **Three 100%-weight 6-dimension scorecards** tailored to `commercial`, `free-oss`, and `internal-tool` archetypes, capped at `<= 5.0` for unverified desk facts and `<= 7.5` for unverified primary assumptions, with max 2 redesign rounds (`V1 -> V2 -> V3`).
 - **On-demand cross-border compliance (`module-cross-border-compliance.md`)**: Loaded automatically when `cross_border: true`; verifies live-date developer jurisdiction eligibility, payment/MoR boundaries, GDPR Art. 17 erasure, AI retention disclosures, and OSS copyleft rules.
 - **Automated `check_launch_gate.py` checks**: Rejects `tbd` SSOT enums, unresolved `{{FILL:...}}` tokens, missing/unpaired `LAUNCH_BLOCKERS` delimiters, unchecked blockers, 5 secret classes (including `.zero-to-launch/archive/` and frontend `NEXT_PUBLIC_*SECRET*` leaks—never printing plaintext secrets), `MOCK_*=true` in production configs, tracked/unignored `.env*` & `.dev.vars*`, non-allowlisted `.zero-to-launch/` files in Git, missing `.dockerignore`/PaaS exclusions, `dist/.zero-to-launch` build leaks, and fails closed if `--max-files` is exceeded.
-- **CI verified across 4 environments**: `scripts/validate_repo.py --release` runs full metadata, link, privacy, and isolated unit tests on `ubuntu-latest` and `windows-latest` across Python `3.9` and `3.12`.
+- **CI verified across 4 environments**: `scripts/validate_repo.py --release` runs full metadata, link, privacy, and isolated unit tests on Ubuntu (`24.04` / `latest`) and `windows-latest` across Python `3.9` and `3.12`.
 
 </details>
 
