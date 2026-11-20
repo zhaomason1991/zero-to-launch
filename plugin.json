@@ -1,0 +1,13 @@
+{
+  "name": "zero-to-launch",
+  "displayName": "Zero-to-Launch",
+  "version": "1.0.0",
+  "description": "End-to-end 0-to-1 product discovery, multi-domain expert red-teaming, behavioral validation, agent-ready build specs, DevSecOps launch gates, and post-launch growth operations.",
+  "logo": "https://raw.githubusercontent.com/zhaomason1991/zero-to-launch/main/docs/images/logo.png",
+  "repository": "https://github.com/zhaomason1991/zero-to-launch",
+  "suggestedPrompts": [
+    "Start zero-to-launch from scratch: help me discover and validate a profitable digital product idea",
+    "Red-team my SaaS/app/extension idea with domain experts before I write any code",
+    "Run the zero-to-launch pre-launch security and readiness gate on my current project"
+  ]
+}
